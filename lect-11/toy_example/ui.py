@@ -1,5 +1,5 @@
 import streamlit as st
-from longest_palindrome import Solution
+from longest_palindrome import find_palindrome
 
 def main():
     st.title("Longest Palindrome Finder")
@@ -10,8 +10,7 @@ def main():
 
     if st.button("Find Longest Palindrome"):
         if input_string:
-            solution = Solution()
-            result = solution.longestPalindrome(input_string)
+            result = find_palindrome(input_string)
             st.write(f"Longest palindrome: {result}")
         else:
             st.write("Please enter a string.")
